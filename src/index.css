@@ -123,7 +123,14 @@
     @apply border-border outline-ring/50;
     }
   body {
-    @apply bg-background text-foreground;
+    @apply flex min-h-svh flex-col bg-background text-foreground;
+    }
+  #root {
+    @apply flex flex-1 flex-col;
+    }
+  /* Static attribution footer in index.html, outside #root */
+  body > footer a {
+    @apply text-foreground underline underline-offset-4 hover:text-primary;
     }
   html {
     @apply font-sans;

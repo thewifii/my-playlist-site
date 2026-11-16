@@ -167,24 +167,17 @@ function Features() {
 function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:px-6">
-        <p>&copy; {currentYear} The HOTSPOT. Vibe Curator.</p>
-        <a
-          href="https://getsongbpm.com"
-          target="_blank"
-          rel="noopener"
-          className="text-foreground underline underline-offset-4 hover:text-primary"
-        >
-          BPM data powered by GetSongBPM
-        </a>
-      </div>
+      {/* The GetSongBPM attribution link is static HTML in index.html, below #root. */}
+      <p className="px-4 pt-6 text-center text-sm text-muted-foreground">
+        &copy; {currentYear} The HOTSPOT. Vibe Curator.
+      </p>
     </footer>
   )
 }
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col">
+    <div className="flex flex-1 flex-col">
       <Navbar />
       <main className="flex-1">
         <Hero />
