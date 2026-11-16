@@ -130,7 +130,7 @@
     }
   /* Static attribution footer in index.html, outside #root */
   body > footer a {
-    @apply text-foreground underline underline-offset-4 hover:text-primary;
+    @apply text-inherit underline underline-offset-4 hover:text-primary;
     }
   html {
     @apply font-sans;

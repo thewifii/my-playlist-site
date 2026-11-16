@@ -164,17 +164,6 @@ function Features() {
   )
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-border">
-      {/* The GetSongBPM attribution link is static HTML in index.html, below #root. */}
-      <p className="px-4 pt-6 text-center text-sm text-muted-foreground">
-        &copy; {currentYear} The HOTSPOT. Vibe Curator.
-      </p>
-    </footer>
-  )
-}
-
 function App() {
   return (
     <div className="flex flex-1 flex-col">
@@ -183,7 +172,10 @@ function App() {
         <Hero />
         <Features />
       </main>
-      <Footer />
+      {/* The page footer (GetSongBPM attribution) is static HTML in index.html, below #root. */}
+      <p className="border-t border-border px-4 pt-6 text-center text-sm text-muted-foreground">
+        &copy; {currentYear} The HOTSPOT. Vibe Curator.
+      </p>
     </div>
   )
 }
