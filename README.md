@@ -91,7 +91,7 @@ Commit and push the `wrangler.toml` change, then in the Cloudflare dashboard:
 3. Set the **deploy command** to `npx opennextjs-cloudflare deploy`.
 4. Save and deploy. Every push to `main` now redeploys the site.
 
-The project name in Cloudflare must match `name = "thewifii"` in `wrangler.toml`. If you are reusing an existing project, change `name` to match it.
+The project name in Cloudflare must match `name = "my-playlist-site"` in `wrangler.toml`. If you are reusing an existing project, change `name` to match it.
 
 > **Why Workers and not classic Pages?** Cloudflare now runs full-stack Next.js apps as a Worker with static assets, and `@cloudflare/next-on-pages` is deprecated. The GitHub-connected workflow, custom domains, D1 and R2 all work the same way. You can also deploy from your own machine at any time with `npm run deploy`.
 

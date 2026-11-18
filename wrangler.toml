@@ -1,6 +1,6 @@
 # Cloudflare configuration for The Wifii / Culture Lives Here.
 # Built with OpenNext for Cloudflare (`npm run deploy`).
-name = "thewifii"
+name = "my-playlist-site"
 main = ".open-next/worker.js"
 compatibility_date = "2026-11-01"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
