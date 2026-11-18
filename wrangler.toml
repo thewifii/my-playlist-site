@@ -17,13 +17,15 @@ enabled = true
 [[d1_databases]]
 binding = "DB"
 database_name = "thewifii-db"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "45b9e43d-8f9e-4c8e-b743-148217fe5261"
 
 # R2 bucket: dashboard uploads (covers, merch photos, audio previews).
-# Create it with `npx wrangler r2 bucket create thewifii-media`.
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "thewifii-media"
+# TEMPORARILY OFF: R2 bucket creation was failing on the Cloudflare account at launch.
+# Once the bucket exists (npx wrangler r2 bucket create thewifii-media), uncomment the
+# three lines below and redeploy. Until then the dashboard asks for media URLs instead.
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "thewifii-media"
 
 # Non-secret settings. Secrets (ADMIN_PASSWORD, ANTHROPIC_API_KEY, SPOTIFY_*, ...)
 # are set with `npx wrangler secret put NAME` or in the Cloudflare dashboard.
