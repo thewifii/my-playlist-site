@@ -1,0 +1,31 @@
+# Cloudflare configuration for The Wifii / Culture Lives Here.
+# Built with OpenNext for Cloudflare (`npm run deploy`).
+name = "thewifii"
+main = ".open-next/worker.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[observability]
+enabled = true
+
+# D1 database: all CMS content. Create it with `npx wrangler d1 create thewifii-db`
+# and paste the returned id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "thewifii-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# R2 bucket: dashboard uploads (covers, merch photos, audio previews).
+# Create it with `npx wrangler r2 bucket create thewifii-media`.
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "thewifii-media"
+
+# Non-secret settings. Secrets (ADMIN_PASSWORD, ANTHROPIC_API_KEY, SPOTIFY_*, ...)
+# are set with `npx wrangler secret put NAME` or in the Cloudflare dashboard.
+[vars]
+SITE_URL = "https://thewifii.com"
